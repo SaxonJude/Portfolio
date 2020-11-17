@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Project from './Project';
@@ -17,6 +17,43 @@ import upperWave from './images/upperWave.svg';
 import lowerWave from './images/lowerWave.svg';
 
 const App = () => {
+    const [formState, setFormState] = useState({
+        name: "",
+        email: "",
+        message: ""
+    });
+    const [ success, setSuccess ] = useState(false);
+    const [ failure, setFailure ] = useState(false);
+
+    const handleChange = e => {
+        setFormState({
+            ...formState,
+            [e.target.name]: e.target.value,
+        })
+    }
+
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
+    const handleSubmit = e => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...formState })
+          })
+            .then(() => setSuccess(true))
+            .catch(error => {
+                alert('Something went wrong submitting the form :(')
+                console.log(error);
+                setFailure(true);
+            });
+    
+          e.preventDefault();
+    }
+
     return (
         <div>
             <Header />
@@ -28,13 +65,13 @@ const App = () => {
                             <h2>React Based Front-end Web Developer</h2>
                         </div>
                         <section>
-                            <a href="#">Projects</a><span>/</span>
-                            <a href="#">Skills</a><span>/</span>
-                            <a href="#">Contact</a>
+                            <a href="#projects">Projects</a><span>/</span>
+                            <a href="#skills">Skills</a><span>/</span>
+                            <a href="#contact">Contact</a>
                         </section>
                     </div>
                 </div>
-                <div className={landingStyles.workList_container}>
+                <div id='projects' className={landingStyles.workList_container}>
                     <div className={landingStyles.workList_container_inner}>
                         <div className={landingStyles.workList_container_heading}>
                             <h4>Case Studies</h4>
@@ -142,13 +179,50 @@ const App = () => {
                     <img src={upperWave} alt="Wave"/>
                     <div className={landingStyles.content_box}>
                         <div className={landingStyles.content_about}>
-
+                            <h4>Who Am I<span>?</span></h4>
+                            <p>
+                                Hi, I’m <span>Saxon Du Plooy</span>, I was born in <span>Durban, SA</span> and moved to the UK when I was 3. 
+                                I’m a self-taught front end web developer with a strong <span>passion</span> for web development I’m constantly learning new skills to grow my knowledge. My experience includes from building beautiful static CSS/JavaScript websites, to developing React/Redux applications that require authentication.
+                            </p>
+                            <p id='skills'>
+                                I've dedicated my time to better myself as a developer and a problem 
+                                solver through early mornings and late nights. I’m in a <span>constant pursuit</span> of finding new chances to better myself in accordance to who I was yesterday.
+                            </p>
                         </div>
+                        <hr />
                         <div className={landingStyles.content_skills}>
-
+                            <h4>Skills<span>.</span></h4>
+                            <ul>
+                                <li>
+                                    <h5><span>Front End</span>:</h5>
+                                    <section>HTML5, CSS3, SCSS/LESS, JavaScript, React, Redux, Gatsby,  Front-end Frameworks  <p> - (Bootstrap / Materialise / Semantic ui)</p> </section>
+                                </li>
+                                <li>
+                                    <h5><span>Backend</span>:</h5>
+                                    <p>NodeJS, Express, MongoDB, Axios</p>
+                                </li>
+                                <li id='contact'>
+                                    <h5><span>Other</span>:</h5>
+                                    <p>Git, GitHub, Wordpress, Figma, Photoshop, Premiere</p>
+                                </li>
+                                <li>
+                                    <h5><span>Learning</span>:</h5>
+                                    <p>Typescript, jQuery, GraphQL</p>
+                                </li>
+                            </ul>
                         </div>
+                        <hr />
                         <div className={landingStyles.content_form}>
-
+                            <h4>Get in touch <span>!</span></h4>
+                            <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                                <label htmlFor="name">Name <span>*</span></label>
+                                <input id="name" name="name" type="text" onChange={handleChange} value={formState.name} />
+                                <label htmlFor="email">Email <span>*</span></label>
+                                <input id="email" name="email" type="email" onChange={handleChange} value={formState.email} />
+                                <label htmlFor="message">Message <span>*</span></label>
+                                <input id="message" name="message" type="text" onChange={handleChange} value={formState.message} />
+                                <button className={success && !failure ? landingStyles.success : ''} type="submit">{success && !failure ? 'Sent!' : 'Send Message'}</button>
+                            </form>
                         </div>
                     </div>
                     <img src={lowerWave} alt="Wave"/>

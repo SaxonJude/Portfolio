@@ -5,7 +5,6 @@
   background: $dark-black;
   height: 250px;
   width: 100%;
-  border: 1px solid white;
   .inner_footer {
     @include flex-custom(column, center, center);
     height: 130px;

@@ -2,16 +2,31 @@
 
 .header {
   @include flex-custom(row, center, center);
+  z-index: 999;
+  background-color: $dark-black;
   position: sticky;
   top: 0;
-  //   border: 1px solid white;
   height: 90px;
   width: 100%;
+  i {
+    @include flex-custom(row, center, center);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    color: $color-white;
+    display: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
   .inner_header {
     width: 80%;
     @include flex-custom(row, space-between, center);
     img {
       max-width: 60px;
+      cursor: crosshair;
     }
     .header_anchors {
       @include flex-custom(row, space-between, center);
@@ -26,4 +41,8 @@
       }
     }
   }
+}
+
+.active {
+  display: inline-block !important;
 }
