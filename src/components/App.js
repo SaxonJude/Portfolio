@@ -13,6 +13,8 @@ import img3 from './images/img3.jpg';
 import img4 from './images/img4.jpg';
 import img5 from './images/img5.jpg';
 import img6 from './images/img6.jpg';
+import upperWave from './images/upperWave.svg';
+import lowerWave from './images/lowerWave.svg';
 
 const App = () => {
     return (
@@ -50,7 +52,10 @@ const App = () => {
                              skill6='Axios'
                              skill7='Git'
                              skill8='CSS/SCSS'
-                             vc=' - Version Control'
+                             url1=''
+                             url2=''
+                             url3=''
+                             dribble='true'
                              />
                             <Project
                              img={img2}
@@ -63,7 +68,10 @@ const App = () => {
                              skill6='Axios'
                              skill7='Git'
                              skill8='CSS/SCSS'
-                             vc=' - Version Control'
+                             url1=''
+                             url2=''
+                             url3=''
+                             dribble='true'
                              />
                             <Project
                              img={img3}
@@ -76,7 +84,10 @@ const App = () => {
                              skill6='Axios'
                              skill7='Git'
                              skill8='CSS/SCSS'
-                             vc=' - Version Control'
+                             url1=''
+                             url2=''
+                             url3=''
+                             dribble='true'
                              />
                             <Project
                              img={img4}
@@ -89,7 +100,10 @@ const App = () => {
                              skill6='Axios'
                              skill7='Git'
                              skill8='CSS/SCSS'
-                             vc=' - Version Control'
+                             url1=''
+                             url2=''
+                             url3=''
+                             dribble='true'
                              />
                             <Project
                              img={img5}
@@ -102,7 +116,9 @@ const App = () => {
                              skill6='Axios'
                              skill7='Git'
                              skill8='CSS/SCSS'
-                             vc=' - Version Control'
+                             url1=''
+                             url2=''
+                             url3=''
                              />
                             <Project
                              img={img6}
@@ -115,10 +131,27 @@ const App = () => {
                              skill6='Axios'
                              skill7='Git'
                              skill8='CSS/SCSS'
-                             vc=' - Version Control'
+                             url1=''
+                             url2=''
+                             url3=''
                              />
                         </div>
                     </div>
+                </div>
+                <div className={landingStyles.content_container}>
+                    <img src={upperWave} alt="Wave"/>
+                    <div className={landingStyles.content_box}>
+                        <div className={landingStyles.content_about}>
+
+                        </div>
+                        <div className={landingStyles.content_skills}>
+
+                        </div>
+                        <div className={landingStyles.content_form}>
+
+                        </div>
+                    </div>
+                    <img src={lowerWave} alt="Wave"/>
                 </div>
             <Footer />
         </div>

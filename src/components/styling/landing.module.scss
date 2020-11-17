@@ -57,14 +57,14 @@
   @include flex-custom(column, center, center);
   height: 2791px;
   width: 100%;
-  border: 1px solid white;
+  //   border: 1px solid white;
   .workList_container_inner {
     @include flex-custom(column, center, center);
     height: 100%;
     width: 1000px;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     .workList_container_heading {
-      border: 1px solid white;
+      //   border: 1px solid white;
       @include flex-custom(column, center, center);
       text-transform: uppercase;
       * {
@@ -86,6 +86,17 @@
     @include flex-custom(column, space-evenly, center);
     height: 100%;
     width: 100%;
-    border: 1px solid white;
+    // border: 2px solid yellow;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25)
+      )
+      no-repeat top/1px 90%;
   }
 }
+
+// .content_container {
+//     height: 140em;
+//     width: 100%;
+//     background-color: ;
+// }

@@ -4,26 +4,43 @@
   @include flex-custom(row-reverse, center, center);
   height: 353px;
   width: 100%;
-  border: 1px solid white;
+  //   border: 1px solid white;
   color: $color-white;
   &:nth-child(2n + 1) {
     flex-direction: row;
-    border: 1px solid red !important;
+    // border: 1px solid red !important;
+    .project_content_inner {
+      right: 3.5rem !important;
+    }
   }
   .project_content {
-    border: 1px solid white;
+    // border: 1px solid white;
     height: 100%;
+    position: relative;
     width: stretch;
     .project_content_inner {
-      border: 1px solid green;
+      @include flex-custom(column, space-between, flex-start);
+      //   border: 1px solid green;
       height: 230px;
       width: 230px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       text-align: left;
       h4 {
         text-transform: uppercase;
         font-size: 24px;
         font-weight: 500;
+        position: relative;
         margin: 0;
+        &:before {
+          border-top: 1px solid $brand-color;
+          content: "";
+          position: absolute;
+          left: -7rem;
+          top: 50%;
+          width: 100px;
+        }
       }
       h5 {
         margin: 0;
@@ -33,29 +50,43 @@
         @include flex-custom(row, center, center);
         height: 84px;
         width: 100%;
+        .project_content_list_ul1 * {
+          color: $brand-color;
+        }
         ul {
-          border: 0.5px solid purple;
+          //   border: 0.5px solid purple;
           margin: 0;
           padding: 0;
           list-style-type: none;
           width: 50%;
           height: 84px;
           li {
-            //   border: 0.1px solid red;
-            // width: 113px !important;
             font-size: 14px;
             font-weight: 300;
-            span {
-              font-size: 12px;
-              font-weight: 200;
-            }
           }
         }
       }
       .buttons {
+        position: relative;
+        bottom: 4px;
         a {
           text-decoration: none;
+          text-transform: uppercase;
           color: inherit;
+          font-size: 10px !important;
+          margin-right: 0.55rem !important;
+          font-weight: 400 !important;
+          border: 1px solid white;
+          padding: 0.4rem 0.5rem !important;
+          &:last-of-type {
+            padding: 0.22rem 0.4rem !important;
+            position: relative;
+            top: 1px;
+            font-size: 14px !important;
+          }
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -63,6 +94,8 @@
   img {
     width: 600px;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    position: relative;
+    top: 1.4rem;
   }
 }
