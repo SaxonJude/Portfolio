@@ -1,0 +1,68 @@
+@import "../styling/variables";
+
+.project_container {
+  @include flex-custom(row-reverse, center, center);
+  height: 353px;
+  width: 100%;
+  border: 1px solid white;
+  color: $color-white;
+  &:nth-child(2n + 1) {
+    flex-direction: row;
+    border: 1px solid red !important;
+  }
+  .project_content {
+    border: 1px solid white;
+    height: 100%;
+    width: stretch;
+    .project_content_inner {
+      border: 1px solid green;
+      height: 230px;
+      width: 230px;
+      text-align: left;
+      h4 {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+      }
+      h5 {
+        margin: 0;
+        font-size: 16px;
+      }
+      .project_content_list {
+        @include flex-custom(row, center, center);
+        height: 84px;
+        width: 100%;
+        ul {
+          border: 0.5px solid purple;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          width: 50%;
+          height: 84px;
+          li {
+            //   border: 0.1px solid red;
+            // width: 113px !important;
+            font-size: 14px;
+            font-weight: 300;
+            span {
+              font-size: 12px;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+      .buttons {
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+  img {
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,91 @@
+@import "./variables";
+
+.hero {
+  @include flex-custom(column, center, center);
+  height: 90vh;
+  width: 100%;
+  .inner_hero {
+    @include flex-custom(column, space-between, center);
+    height: 192px;
+    width: 430px;
+    .inner_hero_container {
+      @include flex-custom(column, center, center);
+      height: 144px;
+      width: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 331px;
+      }
+      h1,
+      h2 {
+        z-index: 2;
+        color: $color-white;
+        margin: 0;
+      }
+      h1 {
+        text-transform: uppercase;
+        font-size: 48px;
+      }
+      h2 {
+        font-weight: 400;
+        font-size: 13px;
+        color: #d7d7d7da;
+      }
+    }
+    section {
+      * {
+        font-size: 14px;
+      }
+      a {
+        color: #bababa;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      span {
+        padding: 0 5px;
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+.workList_container {
+  @include flex-custom(column, center, center);
+  height: 2791px;
+  width: 100%;
+  border: 1px solid white;
+  .workList_container_inner {
+    @include flex-custom(column, center, center);
+    height: 100%;
+    width: 1000px;
+    border: 2px solid blue;
+    .workList_container_heading {
+      border: 1px solid white;
+      @include flex-custom(column, center, center);
+      text-transform: uppercase;
+      * {
+        margin: 0;
+      }
+      h4 {
+        font-weight: 400;
+        font-size: 14px;
+        color: #e5e5e5;
+      }
+      h3 {
+        font-weight: 500;
+        font-size: 48px;
+        color: $color-white;
+      }
+    }
+  }
+  .workList_container_projects {
+    @include flex-custom(column, space-evenly, center);
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+  }
+}
