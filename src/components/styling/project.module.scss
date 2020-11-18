@@ -1,14 +1,15 @@
 @import "../styling/variables";
+@import "./media";
 
 .project_container {
   @include flex-custom(row-reverse, center, center);
   height: 353px;
   width: 100%;
-  //   border: 1px solid white;
+  //   border: 1px solid blue;
   color: $color-white;
   &:nth-child(2n + 1) {
     flex-direction: row;
-    // border: 1px solid red !important;
+    // border: 1px solid red;
     .project_content_inner {
       right: 3.5rem !important;
     }
@@ -54,7 +55,6 @@
           color: $brand-color;
         }
         ul {
-          //   border: 0.5px solid purple;
           margin: 0;
           padding: 0;
           list-style-type: none;
@@ -75,9 +75,10 @@
           color: inherit;
           font-size: 10px !important;
           margin-right: 0.55rem !important;
-          font-weight: 400 !important;
+          font-weight: 400;
           border: 1px solid white;
           padding: 0.4rem 0.5rem !important;
+          transition: 0.4s ease;
           &:last-of-type {
             padding: 0.22rem 0.4rem !important;
             position: relative;
@@ -86,6 +87,8 @@
           }
           &:hover {
             cursor: pointer;
+            background-color: $color-white;
+            color: $dark-black;
           }
         }
       }

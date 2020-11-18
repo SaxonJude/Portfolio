@@ -1,7 +1,9 @@
 @import "./variables";
+@import "./media";
 
 .hero {
   @include flex-custom(column, center, center);
+  visibility: hidden;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -24,31 +26,37 @@
         z-index: -1;
         width: 331px;
       }
-      h1,
-      h2 {
-        z-index: 2;
-        color: $color-white;
-        margin: 0;
-      }
-      h1 {
-        text-transform: uppercase;
-        font-size: 48px;
-      }
-      h2 {
-        font-weight: 400;
-        font-size: 13px;
-        color: #d7d7d7da;
+      .inner_hero_line {
+        h1,
+        h2 {
+          z-index: 2;
+          color: $color-white;
+          margin: 0;
+        }
+        h1 {
+          text-transform: uppercase;
+          font-size: 48px;
+        }
+        h2 {
+          font-weight: 500;
+          font-size: 14px;
+          color: #d7d7d7da;
+        }
       }
     }
     section {
       * {
-        font-size: 14px;
+        font-size: 15px;
       }
       a {
         color: #bababa;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 500;
+        transition: 0.5s ease;
+        &:hover {
+          color: $brand-color;
+        }
       }
       span {
         padding: 0 5px;
@@ -60,16 +68,13 @@
 
 .workList_container {
   @include flex-custom(column, center, center);
-  height: 2791px;
+  height: 174.4em;
   width: 100%;
-  //   border: 1px solid white;
   .workList_container_inner {
     @include flex-custom(column, center, center);
     height: 100%;
     width: 1000px;
-    // border: 2px solid blue;
     .workList_container_heading {
-      //   border: 1px solid white;
       @include flex-custom(column, center, center);
       text-transform: uppercase;
       * {
@@ -91,7 +96,6 @@
     @include flex-custom(column, space-evenly, center);
     height: 100%;
     width: 100%;
-    // border: 2px solid yellow;
     background: linear-gradient(
         rgba(255, 255, 255, 0.25),
         rgba(255, 255, 255, 0.25)
@@ -125,6 +129,7 @@
     }
   }
   .content_box {
+    z-index: 20;
     @include flex-custom(column, space-evenly, center);
     height: 80%;
     width: 1000px;
@@ -145,9 +150,6 @@
       @include flex-custom(column, center, center);
       height: 435px;
       width: 100%;
-      h4 {
-        margin-bottom: 60px;
-      }
       p {
         text-align: center;
         font-size: 24px;
@@ -183,14 +185,12 @@
     }
     .content_form {
       @include flex-custom(column, space-between, center);
-      // border: 1px solid blue;
       height: 555px;
       width: 100%;
       form {
         @include flex-custom(column, flex-start, flex-start);
         width: 800px;
         height: 482px;
-        // border: 1px solid white;
         letter-spacing: 0.5px;
         label {
           padding: 10px 0;
@@ -207,20 +207,47 @@
             margin-bottom: 50px;
           }
         }
-        button {
-          border: none;
-          outline: none;
-          height: 60px;
-          cursor: pointer;
+        .btn_container {
           width: 100%;
-          background-color: $brand-color;
-          color: $color-white;
-          text-transform: uppercase;
-          font-size: 16px;
-          font-family: inherit;
-          font-weight: 500;
-          &:hover {
-            background-color: $brand-color-hover;
+          .btn {
+            border: 1px solid $brand-color;
+            background: none;
+            font-size: 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.8s;
+            height: 60px;
+            position: relative;
+            overflow: hidden;
+            font-size: 16px;
+            font-family: inherit;
+            text-transform: uppercase;
+            font-weight: 500;
+            outline: none;
+          }
+          .btn1 {
+            color: $color-white;
+          }
+          .btn1:hover {
+            color: $brand-color;
+          }
+          .btn::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: $brand-color;
+            z-index: -1;
+            transition: 0.8s;
+          }
+          .btn1::before {
+            top: 0;
+            border-radius: 0 0 50% 50%;
+            height: 180%;
+          }
+          .btn1:hover::before {
+            height: 0%;
           }
         }
       }

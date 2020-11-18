@@ -1,0 +1,162 @@
+@import "./variables";
+
+@media screen and (max-device-width: 1050px) {
+  hr {
+    margin: 1rem 0;
+  }
+  .workList_container {
+    height: 255em !important;
+  }
+  .project_container {
+    flex-direction: column-reverse !important;
+    height: 600px !important;
+    img {
+      height: 55% !important;
+    }
+    .project_content_inner {
+      left: 110px;
+    }
+  }
+  .workList_container_inner {
+    width: 600px !important;
+  }
+  .content_container {
+    height: 110em !important;
+    .content_box {
+      width: 600px !important;
+      height: 80% !important;
+      .content_about {
+        h4 {
+          font-size: 26px !important;
+          margin-bottom: 1rem !important;
+        }
+        p {
+          font-size: 16px !important;
+        }
+      }
+      .content_skills {
+        height: 450px !important;
+        h4 {
+          font-size: 24px !important;
+          margin-bottom: 0px !important;
+        }
+        h5 {
+          font-size: 20px !important;
+        }
+      }
+      .content_form {
+        h4 {
+          font-size: 24px !important;
+        }
+        form {
+          width: 600px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: 620px) {
+  .header_anchors {
+    display: none !important;
+  }
+  .show {
+    @include flex-custom(column, center, center);
+    padding: 0;
+    z-index: -10 !important;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    background-color: $dark-black;
+    top: 3rem;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    animation: show 0.4s ease-in-out;
+    li {
+      width: 100%;
+      padding: 0.5rem 0;
+      margin: 5px 0;
+      text-align: center;
+    }
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .project_container {
+    flex-direction: column-reverse !important;
+    height: 600px !important;
+    img {
+      height: 35% !important;
+      width: 400px !important;
+      border: 1px solid white;
+    }
+  }
+  .project_content_inner {
+    left: 215px !important;
+  }
+  .workList_container_inner {
+    width: 100% !important;
+  }
+  .content_container {
+    height: 140em !important;
+    .content_box {
+      width: 300px !important;
+      height: 80% !important;
+      .content_about {
+        h4 {
+          font-size: 22px !important;
+          margin-bottom: 1rem !important;
+        }
+        p {
+          font-size: 14px !important;
+        }
+      }
+      .content_skills {
+        height: 430px !important;
+        p {
+          font-size: 14px !important;
+        }
+        h4 {
+          font-size: 22px !important;
+          margin-bottom: 0px !important;
+        }
+        h5 {
+          font-size: 15px !important;
+        }
+        ul section {
+          font-size: 14px !important;
+          p {
+            font-size: 12px !important;
+          }
+        }
+      }
+      .content_form {
+        h4 {
+          font-size: 22px !important;
+        }
+        form {
+          width: 300px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: 500px) {
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
