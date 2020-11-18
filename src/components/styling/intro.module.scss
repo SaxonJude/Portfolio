@@ -28,8 +28,9 @@
     .text8,
     .text9,
     .text11 {
-      color: rgba(0, 0, 0, 0);
-      -webkit-text-stroke: 1px $color-white;
+      color: rgba(95, 13, 13, 0);
+      -webkit-text-stroke: 2px white;
+      stroke: 2px white;
     }
   }
 }
@@ -49,51 +50,51 @@
   }
 }
 
-.text1 {
-  animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
-  opacity: 0;
-}
-.text2 {
-  animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
-  opacity: 0;
-}
-.text3 {
-  animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
-  opacity: 0;
-}
-.text4 {
-  animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
-  opacity: 0;
-}
-.text5 {
-  animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
-  opacity: 0;
-}
-.text6 {
-  animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s,
-    slideOut 1s linear 3.2s;
-  opacity: 0;
-}
-.text7 {
-  animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
-  opacity: 0;
-}
-.text8 {
-  animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
-  opacity: 0;
-}
-.text9 {
-  animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
-  opacity: 0;
-}
-.text10 {
-  animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
-  opacity: 0;
-}
-.text11 {
-  animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
-  opacity: 0;
-}
+// .text1 {
+//   animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+//   opacity: 0;
+// }
+// .text2 {
+//   animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+//   opacity: 0;
+// }
+// .text3 {
+//   animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+//   opacity: 0;
+// }
+// .text4 {
+//   animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+//   opacity: 0;
+// }
+// .text5 {
+//   animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+//   opacity: 0;
+// }
+// .text6 {
+//   animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s,
+//     slideOut 1s linear 3.2s;
+//   opacity: 0;
+// }
+// .text7 {
+//   animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+//   opacity: 0;
+// }
+// .text8 {
+//   animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+//   opacity: 0;
+// }
+// .text9 {
+//   animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+//   opacity: 0;
+// }
+// .text10 {
+//   animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+//   opacity: 0;
+// }
+// .text11 {
+//   animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+//   opacity: 0;
+// }
 
 @keyframes slideOut {
   0% {

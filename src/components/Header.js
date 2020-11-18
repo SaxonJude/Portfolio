@@ -59,7 +59,7 @@ const Header = () => {
                     <li><a href='#skills'rel="noopener noreferrer">Skills</a></li>
                 </ul>
             </div>
-            <a href="#">
+            <a href="/#">
                 <i className={`${headerStyles.message} fas fa-long-arrow-alt-up ${scroll ? headerStyles.active : ''}`}></i>
             </a>
         </nav>

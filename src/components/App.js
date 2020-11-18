@@ -193,7 +193,7 @@ const App = () => {
 
     return (
         <div>
-            <div className={landingStyles.introo}><Intro /></div>
+            <Intro />
             <Header />
                 <div ref={el => hero = el} className={landingStyles.hero}>
                     <div className={landingStyles.inner_hero}>
