@@ -193,7 +193,7 @@ const App = () => {
 
     return (
         <div>
-            <Intro />
+            {/* <Intro /> */}
             <Header />
                 <div ref={el => hero = el} className={landingStyles.hero}>
                     <div className={landingStyles.inner_hero}>
@@ -367,7 +367,7 @@ const App = () => {
                         <div ref={el => about = el} className={landingStyles.content_about}>
                             <h4>Who Am I<span>?</span></h4>
                             <p>
-                            Hello, I’m <span>Saxon Du Plooy</span>, born in <span>Durban, SA</span> and relocated as a child to the New Forest and educated at Ringwood Comprehensive and Bournemouth College.  I’m a self-taught front end web developer with a strong <span>passion</span> for web development and constantly learning new skills to grow my knowledge. 
+                            I’m a self-taught front end web developer with a strong <span>passion</span> for web development and constantly learning new skills to grow my knowledge. 
                             </p>
                             <p>
                                 My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I’ve also done some freelanced <span>Wordpress</span> sites on the side.
