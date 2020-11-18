@@ -5,23 +5,19 @@
   @include flex-custom(row-reverse, center, center);
   height: 353px;
   width: 100%;
-  //   border: 1px solid blue;
   color: $color-white;
   &:nth-child(2n + 1) {
     flex-direction: row;
-    // border: 1px solid red;
     .project_content_inner {
       right: 3.5rem !important;
     }
   }
   .project_content {
-    // border: 1px solid white;
     height: 100%;
     position: relative;
     width: stretch;
     .project_content_inner {
       @include flex-custom(column, space-between, flex-start);
-      //   border: 1px solid green;
       height: 230px;
       width: 230px;
       position: absolute;

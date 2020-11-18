@@ -1,6 +1,9 @@
 @import "./variables";
 
 @media screen and (max-device-width: 1050px) {
+  .text {
+    font-size: 32px !important;
+  }
   hr {
     margin: 1rem 0;
   }
@@ -57,8 +60,46 @@
 }
 
 @media screen and (max-device-width: 620px) {
+  .footer ul {
+    flex-direction: column !important;
+    margin: 1rem 0 !important;
+  }
+  .text {
+    font-size: 24px !important;
+  }
+  .inner_hero {
+    height: 120px !important;
+    width: 310px !important;
+    .inner_hero_container {
+      img {
+        width: 230px !important;
+      }
+      .inner_hero_line {
+        h1 {
+          font-size: 35px !important;
+        }
+        h2 {
+          font-size: 10px !important;
+        }
+      }
+    }
+    section {
+      a,
+      span {
+        font-size: 9px !important;
+      }
+    }
+  }
   .header_anchors {
     display: none !important;
+  }
+  .workList_container_heading {
+    h4 {
+      font-size: 12px !important;
+    }
+    h3 {
+      font-size: 26px !important;
+    }
   }
   .show {
     @include flex-custom(column, center, center);
@@ -79,6 +120,9 @@
       padding: 0.5rem 0;
       margin: 5px 0;
       text-align: center;
+      &:hover {
+        background-color: $brand-color;
+      }
     }
     a {
       font-size: 16px;
@@ -92,14 +136,22 @@
   .project_container {
     flex-direction: column-reverse !important;
     height: 600px !important;
+    .project_content {
+      @include flex-custom(column, center, center);
+      .project_content_inner {
+        position: unset !important;
+        right: unset !important;
+        bottom: unset !important;
+        h4::before {
+          display: none !important;
+        }
+      }
+    }
     img {
       height: 35% !important;
       width: 400px !important;
       border: 1px solid white;
     }
-  }
-  .project_content_inner {
-    left: 215px !important;
   }
   .workList_container_inner {
     width: 100% !important;
@@ -149,7 +201,33 @@
   }
 }
 
-@media screen and (max-device-width: 500px) {
+@media screen and (max-device-width: 430px) {
+  .text {
+    font-size: 18px !important;
+  }
+  .hero {
+    height: 85vh !important;
+  }
+  .workList_container {
+    height: 234em !important;
+    .workList_container_inner {
+      justify-content: flex-end !important;
+    }
+    .workList_container_projects {
+      height: 81% !important;
+    }
+  }
+  .project_container {
+    height: 550px !important;
+    width: 330px !important;
+    .project_content {
+      height: 56% !important;
+      justify-content: flex-end !important;
+    }
+    img {
+      width: 330px !important;
+    }
+  }
 }
 
 @keyframes show {

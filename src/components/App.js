@@ -36,8 +36,7 @@ const App = () => {
     let projectList = useRef(null);
     let about = useRef(null);
     let skills = useRef(null);
-    let form = useRef(null);
-    let tl = new TimelineLite({delay: 6.2});
+    let tl = new TimelineLite({delay: 6.1});
 
     useEffect(() => {
         const heroImg = mainLogo.children[0];
@@ -57,17 +56,10 @@ const App = () => {
         const aboutP1 = about.children[1];
         const aboutP2 = about.children[2];
         const aboutP3 = about.children[3];
-        
-        const skillsHeader = skills.children[0];
-        const skills1 = skills.children[1].children[0];
-        const skills2 = skills.children[1].children[1];
-        const skills3 = skills.children[1].children[2];
-        const skills4 = skills.children[1].children[3];
 
         const projectArray = [project1, project2, project3, project4, project5, project6];
         const projectTitle = [projectH5, projectH4];
         const aboutArray = [aboutHeader, aboutP1, aboutP2, aboutP3];
-        const skillsArray = [skillsHeader, skills1, skills2, skills3, skills4];
 
         TweenMax.to(hero, 0, {css: {visibility: 'visible'}});
 
@@ -76,7 +68,7 @@ const App = () => {
             opacity: 0, 
             ease: Power3.easeOut, 
             delay: .2 
-        }, .15, 'hero')
+        }, .15)
 
         // HERO LOGO
 
@@ -93,8 +85,7 @@ const App = () => {
                     id: `section-${index+1}`,
                     trigger: projectH4,
                     start: 'top 90%',
-                    toggleActions: 'play none none none',
-                    // markers: true
+                    toggleActions: 'play none none pause',
                 }
             });
         })
@@ -115,7 +106,6 @@ const App = () => {
                     trigger: el,
                     start: 'top 80%',
                     toggleActions: 'play none none reverse',
-                    // markers: true
                 }
             });
         })
@@ -136,59 +126,21 @@ const App = () => {
                     trigger: el,
                     start: 'top 80%',
                     toggleActions: 'play none none none',
-                    // markers: true
                 }
             });
         })
 
-        // SKILLS SECTION
-
-        skillsArray.forEach((el, index) => {
-            gsap.fromTo(el, {
-                opacity: 0,
-                y: 100,
-            }, {
-                y: 0,
-                duration: .4,
-                opacity: 1,
-                ease: 'none',
-                scrollTrigger: {
-                    id: `section-${index+1}`,
-                    trigger: el,
-                    start: 'center 80%',
-                    delay: 1,
-                    toggleActions: 'play none none none',
-                    // markers: true
-                }
-            });
-        })
-
-        // FORM
-
-        gsap.fromTo(form, {
-            opacity: 0,
-            y: 100,
-        }, {
-            y: 0,
-            duration: .4,
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: form,
-                start: 'top 80%',
-                toggleActions: 'play none none none',
-                // markers: true
-            }
-        });
         tl.from(section, 1, {y: 20, opacity: 0, ease: Power3.easeOut}, 1)
 
-    }, [tl]);
+    });
 
     const handleChange = e => {
+        e.preventDefault();
         setFormState({
             ...formState,
             [e.target.name]: e.target.value,
         })
+        e.preventDefault();
     }
 
     const encode = (data) => {
@@ -198,6 +150,7 @@ const App = () => {
     }
 
     const handleSubmit = e => {
+        e.preventDefault();
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -209,8 +162,6 @@ const App = () => {
                 console.log(error);
                 setFailure(true);
             });
-    
-          e.preventDefault();
     }
 
     return (
@@ -378,7 +329,7 @@ const App = () => {
                             </ul>
                         </div>
                         <hr />
-                        <div ref={el => form = el} className={landingStyles.content_form}>
+                        <div className={landingStyles.content_form}>
                             <h4>Get in touch <span>!</span></h4>
                             <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                                 <label htmlFor="name">Name <span>*</span></label>
@@ -386,7 +337,8 @@ const App = () => {
                                 <label htmlFor="email">Email <span>*</span></label>
                                 <input id="email" name="email" type="email" onChange={handleChange} value={formState.email} />
                                 <label htmlFor="message">Message <span>*</span></label>
-                                <input id="message" name="message" type="text" onChange={handleChange} value={formState.message} />
+                                {/* <input id="message" name="message" type="text"  /> */}
+                                <textarea name="message" id="message" cols="30" rows="10" onChange={handleChange} value={formState.message}></textarea>
                                 <div className={landingStyles.btn_container}>
                                     <button className={`${success && !failure ? landingStyles.success : ''} ${landingStyles.btn} ${landingStyles.btn1}`} type="submit">{success && !failure ? 'Sent!' : 'Send Message'}</button>
                                 </div>
