@@ -186,6 +186,13 @@
   }
 }
 
+.introo {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+}
+
 .success {
   background-color: #4bb543;
 }

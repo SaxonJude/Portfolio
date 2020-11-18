@@ -52,6 +52,12 @@
 }
 
 @media screen and (max-device-width: 620px) {
+  .image_desc {
+    font-size: 11px !important;
+    width: 80% !important;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+  }
   .footer ul {
     flex-direction: column !important;
     margin: 1rem 0 !important;
@@ -185,15 +191,25 @@
 }
 
 @media screen and (max-device-width: 430px) {
+  .image_desc {
+    font-size: 9px !important;
+    width: 85% !important;
+    line-height: 15px !important;
+  }
   .text {
     font-size: 18px !important;
   }
   .hero {
     height: 85vh !important;
   }
+  .content_container {
+    height: 100em !important;
+  }
   .workList_container {
-    height: 234em !important;
+    height: 220em !important;
     .workList_container_inner {
+      position: relative !important;
+      bottom: 20rem !important;
       justify-content: flex-end !important;
     }
     .workList_container_projects {
