@@ -3,7 +3,6 @@
 @import "./media";
 
 body {
-  animation: scrollY 22s ease;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -42,13 +41,4 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: $brand-color-hover;
-}
-
-@keyframes scrollY {
-  from {
-    overflow-y: hidden;
-  }
-  to {
-    overflow-y: visible;
-  }
 }
