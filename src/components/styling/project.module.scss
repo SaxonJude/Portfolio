@@ -2,7 +2,7 @@
 @import "./media";
 
 .project_container {
-  @include flex-custom(row-reverse, center, center);
+  @include flex-custom(row-reverse, flex-start, flex-end);
   height: 353px;
   width: 100%;
   color: $color-white;
@@ -82,7 +82,7 @@
             font-size: 14px !important;
           }
           &:hover {
-            cursor: pointer;
+            cursor: crosshair;
             background-color: $color-white;
             color: $dark-black;
           }
@@ -90,11 +90,50 @@
       }
     }
   }
-  img {
-    width: 600px;
-    height: 100%;
-    object-fit: contain;
+  .image {
+    @include flex-custom(center, center, center);
     position: relative;
-    top: 1.4rem;
+    img {
+      width: 600px;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+    }
+    .image_overlay {
+      @include flex-custom(center, center, center);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      cursor: crosshair;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+      .image_desc {
+        text-align: center;
+        line-height: 25px;
+        font-weight: 500;
+        font-size: 13px;
+        width: 70%;
+        span {
+          color: $brand-color;
+        }
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes imgHover {
+  from {
+    opacity: 0;
+    height: 5%;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
   }
 }

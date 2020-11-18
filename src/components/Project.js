@@ -30,7 +30,18 @@ const Project = props => {
                     </div>
                 </div>
             </div>
-            <img src={props.img} alt="Project"/>
+            <div className={projectStyles.image}>
+                <img src={props.img} alt="Project"/>
+                <div className={projectStyles.image_overlay}>
+                    <p className={projectStyles.image_desc}>
+                        {props.descBlack1} <span>{props.descPink1} </span>
+                        {props.descBlack2} <span>{props.descPink2} </span>
+                        {props.descBlack3} <span>{props.descPink3} </span>
+                        {props.descBlack4} <span>{props.descPink4} </span>
+                        {props.descBlack5}
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }

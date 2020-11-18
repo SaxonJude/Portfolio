@@ -57,9 +57,16 @@ const App = () => {
         const aboutP2 = about.children[2];
         const aboutP3 = about.children[3];
 
+        const skillsHeader = skills.children[0];
+        const skill1 = skills.children[1].children[0];
+        const skill2 = skills.children[1].children[1];
+        const skill3 = skills.children[1].children[2];
+        const skill4 = skills.children[1].children[3];
+
         const projectArray = [project1, project2, project3, project4, project5, project6];
         const projectTitle = [projectH5, projectH4];
         const aboutArray = [aboutHeader, aboutP1, aboutP2, aboutP3];
+        const skillsArray = [skillsHeader, skill1, skill2, skill3, skill4];
 
         TweenMax.to(hero, 0, {css: {visibility: 'visible'}});
 
@@ -125,7 +132,27 @@ const App = () => {
                     id: `section-${index+1}`,
                     trigger: el,
                     start: 'top 80%',
-                    toggleActions: 'play none none none',
+                    toggleActions: 'play none none reverse',
+                }
+            });
+        })
+
+        // SKILLS
+
+        skillsArray.forEach((el, index) => {
+            gsap.fromTo(el, {
+                opacity: 0,
+                y: 100,
+            }, {
+                y: 0,
+                duration: .4,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    id: `section-${index+1}`,
+                    trigger: el,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse',
                 }
             });
         })
@@ -180,9 +207,8 @@ const App = () => {
                             </div>
                         </div>
                         <section ref={el => section = el}>
-                            <a href="#projects">Projects</a><span>/</span>
-                            <a href="#skills">Skills</a><span>/</span>
-                            <a href="#contact">Contact</a>
+                            <a href="#projects">Projects</a><span>|</span>
+                            <a href="#skills">Skills</a>
                         </section>
                     </div>
                 </div>
@@ -208,6 +234,15 @@ const App = () => {
                              url2='https://github.com/SaxonJude/StreamMe'
                              url3='https://dribbble.com/shots/14329752-StreamMe-TMDB-desktop-ui-layout'
                              dribble='true'
+                             descBlack1='StreamMe is a feature rich'
+                             descPink1='React / Redux'
+                             descBlack2=' application that’s connected to a backend using MongoDB Atlas. Browse all of your favorite movies and add them to a watchlist while having access to them through a'
+                             descPink2='user profile'
+                             descBlack3='made possible using JWT Token for'
+                             descPink3='Authentication.'
+                             descBlack4=' It fetches data from'
+                             descPink4='TMDB API'
+                             descBlack5='using Axios which uses pagination to sort through 20 films at a time.'
                              />
                             <Project
                              img={img2}
@@ -224,6 +259,15 @@ const App = () => {
                              url2='https://github.com/SaxonJude/andrew-tud'
                              url3='https://dribbble.com/shots/14590009-Personal-Trainer-Website'
                              dribble='true'
+                             descBlack1='A'
+                             descPink1='Freelanced'
+                             descBlack2='website for a personal trainer called Andrew Tudders.  Provided UI/UX mockups using'
+                             descPink2='wire framing'
+                             descBlack3='on Figma to ensure final product will fulfill all expectations. Built with'
+                             descPink3='React / Gatsby'
+                             descBlack4='so the client would have no set up or hosting costs. This sit also features a daily'
+                             descPink4='caloric needs calculator'
+                             descBlack5='as requested from the client.'
                              />
                             <Project
                              img={img3}
@@ -240,6 +284,15 @@ const App = () => {
                              url2='https://github.com/SaxonJude/Nexia'
                              url3='https://dribbble.com/shots/14501070-Nexia-Ecom-Website'
                              dribble='true'
+                             descBlack1='Nexia is an'
+                             descPink1='React / Gatsby'
+                             descBlack2='e-commerce brand selling high-end fashion, styled using'
+                             descPink2='Bootstrap and SCSS'
+                             descBlack3=', which implements a '
+                             descPink3='contenful CMS '
+                             descBlack4='and retrieves data using'
+                             descPink4='GraphQL'
+                             descBlack5=' seamlessly. This was done so more products could be added in the future creating a dynamic workspace. '
                              />
                             <Project
                              img={img4}
@@ -256,6 +309,15 @@ const App = () => {
                              url2=''
                              url3=''
                              dribble='true'
+                             descBlack1='This portfolio was designed in Figma to display'
+                             descPink1='some of my favorite projects.'
+                             descBlack2='These 6 projects out of many display a variety of skill under my belt and are layed out in a way that makes it easy for you to see what they look like, what technologies are used, a link to visit the'
+                             descPink2='live site'
+                             descBlack3='+'
+                             descPink3='source code'
+                             descBlack4='and a'
+                             descPink4='brief description '
+                             descBlack5='of each.'
                              />
                             <Project
                              img={img5}
@@ -271,6 +333,15 @@ const App = () => {
                              url1='https://5fb28fc87c56b6000889e936--frosty-lovelace-145715.netlify.app/'
                              url2='https://github.com/SaxonJude/Forkify-Updated'
                              url3=''
+                             descBlack1='The Forkify Recipe App allows users to search for recipes using the '
+                             descPink1='Food2Fork API.'
+                             descBlack2='Users can also view the recipe along with the cook time ingredients. Users can add their favorite meals to a favorite meals section which is stored using'
+                             descPink2='local storage'
+                             descBlack3='so no need for a backend.'
+                             descPink3='Webpack'
+                             descBlack4='was used as the module bundler to incorporate'
+                             descPink4='Axios'
+                             descBlack5=' for fetching. No frameworks were used in this application as it was coded in vanilla Javascript.'
                              />
                             <Project
                              img={img6}
@@ -280,12 +351,12 @@ const App = () => {
                              skill3='HTML5'
                              skill4='CSS3'
                              skill5='Git'
-                             skill6=''
-                             skill7=''
-                             skill8=''
                              url1='https://5fb292857c56b600088b15f6--vibrant-lalande-5c24dc.netlify.app/'
                              url2='https://github.com/SaxonJude/todo-jQuery'
                              url3=''
+                             descBlack1='This To Do calculator was built using HTML5, SCSS and'
+                             descPink1='jQuery.'
+                             descBlack2='A user can add a task to the list of established tasks, mark a task as completed and delete an already added task. '
                              />
                         </div>
                     </div>
@@ -301,12 +372,12 @@ const App = () => {
                             <p>
                                 My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I’ve also done some freelanced <span>Wordpress</span> sites on the side.
                             </p>
-                            <p id='skills'>
+                            <p>
                                 I've dedicated my time to better myself as a developer and a problem 
                                 solver through early mornings and late nights. I’m in a <span>constant pursuit</span> of finding new chances to better myself in accordance to who I was yesterday.
                             </p>
                         </div>
-                        <hr />
+                        <hr id='skills'/>
                         <div ref={el => skills = el} className={landingStyles.content_skills}>
                             <h4>Skills<span>.</span></h4>
                             <ul>
@@ -327,22 +398,6 @@ const App = () => {
                                     <p>Typescript, jQuery, GraphQL</p>
                                 </li>
                             </ul>
-                        </div>
-                        <hr />
-                        <div className={landingStyles.content_form}>
-                            <h4>Get in touch <span>!</span></h4>
-                            <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-                                <label htmlFor="name">Name <span>*</span></label>
-                                <input id="name" name="name" type="text" onChange={handleChange} value={formState.name} />
-                                <label htmlFor="email">Email <span>*</span></label>
-                                <input id="email" name="email" type="email" onChange={handleChange} value={formState.email} />
-                                <label htmlFor="message">Message <span>*</span></label>
-                                {/* <input id="message" name="message" type="text"  /> */}
-                                <textarea name="message" id="message" cols="30" rows="10" onChange={handleChange} value={formState.message}></textarea>
-                                <div className={landingStyles.btn_container}>
-                                    <button className={`${success && !failure ? landingStyles.success : ''} ${landingStyles.btn} ${landingStyles.btn1}`} type="submit">{success && !failure ? 'Sent!' : 'Send Message'}</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
                     <img src={lowerWave} alt="Wave"/>

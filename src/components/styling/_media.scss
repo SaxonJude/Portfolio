@@ -14,7 +14,7 @@
     flex-direction: column-reverse !important;
     height: 600px !important;
     img {
-      height: 55% !important;
+      height: 100% !important;
     }
     .project_content_inner {
       left: 110px;
@@ -45,14 +45,6 @@
         }
         h5 {
           font-size: 20px !important;
-        }
-      }
-      .content_form {
-        h4 {
-          font-size: 24px !important;
-        }
-        form {
-          width: 600px !important;
         }
       }
     }
@@ -148,9 +140,8 @@
       }
     }
     img {
-      height: 35% !important;
+      height: 100% !important;
       width: 400px !important;
-      border: 1px solid white;
     }
   }
   .workList_container_inner {
@@ -187,14 +178,6 @@
           p {
             font-size: 12px !important;
           }
-        }
-      }
-      .content_form {
-        h4 {
-          font-size: 22px !important;
-        }
-        form {
-          width: 300px !important;
         }
       }
     }
