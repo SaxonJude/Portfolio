@@ -36,7 +36,7 @@ const App = () => {
     let projectList = useRef(null);
     let about = useRef(null);
     let skills = useRef(null);
-    let tl = new TimelineLite({delay: 6.1});
+    let tl = new TimelineLite({delay: 1});
 
     useEffect(() => {
         const heroImg = mainLogo.children[0];
