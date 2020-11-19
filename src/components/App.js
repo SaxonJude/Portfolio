@@ -4,7 +4,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import Header from './Header';
 import Footer from './Footer';
-import Intro from './Intro';
 import Project from './Project';
 
 import './styling/styles.scss';
@@ -208,7 +207,7 @@ const App = () => {
                         </div>
                         <section ref={el => section = el}>
                             <a href="#projects">Projects</a><span>|</span>
-                            <a href="#skills">Skills</a>
+                            <a href="#about">About</a>
                         </section>
                     </div>
                 </div>
@@ -363,7 +362,7 @@ const App = () => {
                 </div>
                 <div className={landingStyles.content_container}>
                     <img src={upperWave} alt="Wave"/>
-                    <div className={landingStyles.content_box}>
+                    <div id='about' className={landingStyles.content_box}>
                         <div ref={el => about = el} className={landingStyles.content_about}>
                             <h4>Who Am I<span>?</span></h4>
                             <p>
@@ -377,13 +376,13 @@ const App = () => {
                                 solver through early mornings and late nights. I’m in a <span>constant pursuit</span> of finding new chances to better myself in accordance to who I was yesterday.
                             </p>
                         </div>
-                        <hr id='skills'/>
+                        <hr/>
                         <div ref={el => skills = el} className={landingStyles.content_skills}>
                             <h4>Skills<span>.</span></h4>
                             <ul>
                                 <li>
                                     <h5><span>Front End</span>:</h5>
-                                    <section>HTML5, CSS3, SCSS/LESS, JavaScript, React, Redux, Gatsby,  Front-end Frameworks  <p> - (Bootstrap / Materialise / Semantic ui)</p> </section>
+                                    <section>React, JavaScript, HTML5, CSS3, SCSS/LESS, Redux, Gatsby,  Front-end Frameworks  <p> - (Bootstrap / Materialise / Semantic ui)</p> </section>
                                 </li>
                                 <li>
                                     <h5><span>Backend</span>:</h5>
