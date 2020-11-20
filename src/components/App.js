@@ -202,7 +202,7 @@ const App = () => {
                                 <h1>Saxon Du Plooy</h1>
                             </div>
                             <div className={landingStyles.inner_hero_line}>
-                                <h2>React Based Front-end Web Developer</h2>
+                                <h2>Front-end Web Developer</h2>
                             </div>
                         </div>
                         <section ref={el => section = el}>
