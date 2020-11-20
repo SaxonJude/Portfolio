@@ -254,7 +254,7 @@ const App = () => {
                              skill6='CSS/SCSS'
                              skill7='Git'
                              skill8='Node.Js'
-                             url1='https://5fb3b9883debc3000709ae1b--focused-almeida-f5f7fa.netlify.app/'
+                             url1='http://www.andrewtudders.com/'
                              url2='https://github.com/SaxonJude/andrew-tud'
                              url3='https://dribbble.com/shots/14590009-Personal-Trainer-Website'
                              dribble='true'
