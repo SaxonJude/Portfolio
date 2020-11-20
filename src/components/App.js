@@ -394,7 +394,7 @@ const App = () => {
                                 </li>
                                 <li>
                                     <h5><span>Learning</span>:</h5>
-                                    <p>Typescript, jQuery, GraphQL</p>
+                                    <p>PHP, Typescript, jQuery, GraphQL</p>
                                 </li>
                             </ul>
                         </div>
