@@ -207,7 +207,8 @@ const App = () => {
                         </div>
                         <section ref={el => section = el}>
                             <a href="#projects">Projects</a><span>|</span>
-                            <a href="#about">About</a>
+                            <a href="#about">About</a><span>|</span>
+                            <a href="https://github.com/SaxonJude" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </section>
                     </div>
                 </div>
