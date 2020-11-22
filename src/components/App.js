@@ -383,7 +383,7 @@ const App = () => {
                             <ul>
                                 <li>
                                     <h5><span>Front End</span>:</h5>
-                                    <section>React, JavaScript, HTML5, CSS3, SCSS/LESS, Redux, Gatsby,  Front-end Frameworks  <p> - (Bootstrap / Materialise / Semantic ui)</p> </section>
+                                    <section>React, JavaScript, HTML5, CSS3/SCSS, jQuery, Gatsby,  Front-end Frameworks  <p> - (Bootstrap / Materialise / Semantic ui)</p> </section>
                                 </li>
                                 <li>
                                     <h5><span>Backend</span>:</h5>
@@ -395,7 +395,7 @@ const App = () => {
                                 </li>
                                 <li>
                                     <h5><span>Learning</span>:</h5>
-                                    <p>PHP, Typescript, jQuery, GraphQL</p>
+                                    <p>PHP, Typescript, GraphQL, Redux</p>
                                 </li>
                             </ul>
                         </div>
