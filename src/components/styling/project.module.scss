@@ -2,7 +2,7 @@
 @import "./media";
 
 .project_container {
-  @include flex-custom(row-reverse, flex-start, flex-end);
+  @include flex-custom(row-reverse, flex-start, center);
   height: 353px;
   width: 100%;
   color: $color-white;

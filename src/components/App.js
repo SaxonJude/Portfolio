@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {gsap, TimelineLite, TweenMax, Power3} from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
@@ -21,13 +21,6 @@ import lowerWave from './images/lowerWave.svg';
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
-    const [formState, setFormState] = useState({
-        name: "",
-        email: "",
-        message: ""
-    });
-    const [ success, setSuccess ] = useState(false);
-    const [ failure, setFailure ] = useState(false);
     let mainLogo = useRef(null);
     let section = useRef(null);
     let hero = useRef(null);
@@ -160,39 +153,8 @@ const App = () => {
 
     });
 
-    const handleChange = e => {
-        e.preventDefault();
-        setFormState({
-            ...formState,
-            [e.target.name]: e.target.value,
-        })
-        e.preventDefault();
-    }
-
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-    }
-
-    const handleSubmit = e => {
-        e.preventDefault();
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...formState })
-          })
-            .then(() => setSuccess(true))
-            .catch(error => {
-                alert('Something went wrong submitting the form :(')
-                console.log(error);
-                setFailure(true);
-            });
-    }
-
     return (
         <div>
-            {/* <Intro /> */}
             <Header />
                 <div ref={el => hero = el} className={landingStyles.hero}>
                     <div className={landingStyles.inner_hero}>
@@ -370,7 +332,7 @@ const App = () => {
                             I’m a self-taught front end web developer with a strong <span>passion</span> for web development and constantly learning new skills to grow my knowledge. 
                             </p>
                             <p>
-                                My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I’ve also done some freelanced <span>Wordpress</span> sites on the side.
+                                My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I also have <span>3 years experience</span> building <span>eCommerce</span> stores using SaaS technologies such as shopify and have also done some freelanced Wordpress sites on the side.
                             </p>
                             <p>
                                 I've dedicated my time to better myself as a developer and a problem 
