@@ -3,7 +3,7 @@
 
 .project_container {
   @include flex-custom(row-reverse, flex-start, center);
-  height: 353px;
+  height: 310px;
   width: 100%;
   color: $color-white;
   &:nth-child(2n + 1) {

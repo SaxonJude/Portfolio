@@ -14,7 +14,6 @@ import img2 from './images/img2.jpg';
 import img3 from './images/img3.jpg';
 import img4 from './images/img4.jpg';
 import img5 from './images/img5.jpg';
-import img6 from './images/img6.jpg';
 import upperWave from './images/upperWave.svg';
 import lowerWave from './images/lowerWave.svg';
 
@@ -42,7 +41,6 @@ const App = () => {
         const project3 = projectList.children[2];
         const project4 = projectList.children[3];
         const project5 = projectList.children[4];
-        const project6 = projectList.children[5];
 
         const aboutHeader = about.children[0];
         const aboutP1 = about.children[1];
@@ -55,7 +53,7 @@ const App = () => {
         const skill3 = skills.children[1].children[2];
         const skill4 = skills.children[1].children[3];
 
-        const projectArray = [project1, project2, project3, project4, project5, project6];
+        const projectArray = [project1, project2, project3, project4, project5];
         const projectTitle = [projectH5, projectH4];
         const aboutArray = [aboutHeader, aboutP1, aboutP2, aboutP3];
         const skillsArray = [skillsHeader, skill1, skill2, skill3, skill4];
@@ -304,21 +302,6 @@ const App = () => {
                              descBlack4='was used as the module bundler to incorporate'
                              descPink4='Axios'
                              descBlack5=' for fetching. No frameworks were used in this application as it was coded in vanilla Javascript.'
-                             />
-                            <Project
-                             img={img6}
-                             title='ToDo List'
-                             skill1='jQuery'
-                             skill2='JS Es6'
-                             skill3='HTML5'
-                             skill4='CSS3'
-                             skill5='Git'
-                             url1='https://5fb292857c56b600088b15f6--vibrant-lalande-5c24dc.netlify.app/'
-                             url2='https://github.com/SaxonJude/todo-jQuery'
-                             url3=''
-                             descBlack1='This To Do calculator was built using HTML5, SCSS and'
-                             descPink1='jQuery.'
-                             descBlack2='A user can add a task to the list of established tasks, mark a task as completed and delete an already added task. '
                              />
                         </div>
                     </div>

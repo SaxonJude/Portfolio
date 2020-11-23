@@ -57,6 +57,7 @@ const Header = () => {
                 <ul className={`${show && size.width < 620 ? headerStyles.show : headerStyles.header_anchors}`}>
                     <li><a href='#projects' rel="noopener noreferrer">Projects</a></li>
                     <li><a href='#about'rel="noopener noreferrer">About</a></li>
+                    <li><a href='https://github.com/SaxonJude' target='_blank' rel="noopener noreferrer">GitHub</a></li>
                 </ul>
             </div>
             <a href="/#">

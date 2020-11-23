@@ -15,6 +15,9 @@ body {
     -ms-box-sizing: border-box !important;
     box-sizing: border-box !important;
   }
+  * a {
+    cursor: crosshair;
+  }
 }
 
 html {
