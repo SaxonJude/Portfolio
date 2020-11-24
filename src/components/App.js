@@ -340,7 +340,7 @@ const App = () => {
                                 </li>
                                 <li>
                                     <h5><span>Learning</span>:</h5>
-                                    <p>Magento, BigCommerce, PHP, Typescript, GraphQL, Redux</p>
+                                    <p>Magento, PHP, Typescript, GraphQL, Redux</p>
                                 </li>
                             </ul>
                         </div>

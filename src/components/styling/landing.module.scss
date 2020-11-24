@@ -125,7 +125,7 @@
     }
     &:last-of-type {
       position: absolute;
-      bottom: 0;
+      bottom: -1px;
     }
   }
   .content_box {
