@@ -312,7 +312,7 @@ const App = () => {
                         <div ref={el => about = el} className={landingStyles.content_about}>
                             <h4>Who Am I<span>?</span></h4>
                             <p>
-                            I’m a self-taught front end web developer with a strong <span>passion</span> for web development and constantly learning new skills to grow my knowledge. 
+                            I’m a front end web developer with a strong <span>passion</span> for web development and constantly learning new skills to grow my knowledge. 
                             </p>
                             <p>
                                 My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I also have <span>3 years experience</span> building <span>eCommerce</span> stores using SaaS technologies such as shopify and have also done some freelanced Wordpress sites on the side.
