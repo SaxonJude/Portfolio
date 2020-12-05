@@ -308,11 +308,11 @@ const App = () => {
                             I’m a front end web developer with a strong <span>passion</span> for web development and constantly learning new skills to grow my knowledge.
                             </p>
                         <p>
-                            My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I also have <span>3 years experience</span> building <span>eCommerce</span> stores using SaaS technologies such as shopify and have also done some freelanced Wordpress sites on the side.
+                            My experience includes building beautiful static CSS3/JavaScript websites, to developing complex React/Redux applications that require authentication. I also have <span>3 years of experience</span> building <span>eCommerce</span> stores using SaaS technologies such as Shopify and have also done some freelanced WordPress sites on the side.
                             </p>
                         <p>
                             I've dedicated my time to better myself as a developer and a problem
-                                solver through early mornings and late nights. I’m in a <span>constant pursuit</span> of finding new chances to better myself in accordance to who I was yesterday.
+                                solver through early mornings and late nights. I’m in <span>constant pursuit</span> of finding new chances to better myself in accordance with who I was yesterday.
                             </p>
                     </div>
                     <hr />
