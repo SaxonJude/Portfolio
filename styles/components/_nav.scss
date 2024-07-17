@@ -1,0 +1,51 @@
+@import "../variables";
+@import "../media";
+
+nav {
+    position: fixed;
+    overflow: hidden;
+    z-index: 999;
+    height: 90px;
+    width: 100%;
+    @include flex-custom(row, center, center);
+
+    img {
+        position: relative;
+        top: 4px;
+    }
+
+    .nav_container {
+        height: inherit;
+        width: 80%;
+        @include flex-custom(row, space-between, center);
+        ul {
+            @include flex-custom(row, center, center);
+            li {
+                margin-left: 3rem;
+                font-size: .8rem;
+                position: relative;
+                a::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $brand-color;
+                    bottom: -5px;
+                    left: 0;
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    transition: transform .2s ease-in-out;
+                }
+                  
+                a:hover::before {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+
+                a:hover {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}

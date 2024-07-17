@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/">
 </head>
 
 <body>
@@ -43,175 +44,193 @@
 
     <!-- Main Section -->
     <main id="projects">
-        
+
         <div class="projects_title">
             <p>CASE STUDIES</p>
             <h2>FEATURED WORK</h2>
         </div>
 
-        <!-- StreamMe Project -->
-        <div class="project_container">
-            <div class="project_content">
-                <div class="project_content_inner">
-                    <h4>STREAMME <span class="project_line"></span></h4>
-                    <p>Utilising:</p>
-                    <div class="tech">
-                        <div class="tech_left">
-                            <p>React</p>
-                            <p>Redux</p>
-                            <p>TMDB API</p>
-                            <p>MongoDB</p>
+        <div class="main_container">
+    
+            <!-- StreamMe Project -->
+            <div class="project_container">
+                <div class="project_content">
+                    <div class="project_content_inner">
+                        <h4>STREAMME <span class="project_line"></span></h4>
+                        <p>Utilising:</p>
+                        <div class="tech">
+                            <div class="tech_left">
+                                <p>React</p>
+                                <p>Redux</p>
+                                <p>TMDB API</p>
+                                <p>MongoDB</p>
+                            </div>
+                            <div class="tech_right">
+                                <p>Node.Js</p>
+                                <p>Axios</p>
+                                <p>Git</p>
+                                <p>CSS/SCSS</p>
+                            </div>
                         </div>
-                        <div class="tech_right">
-                            <p>Node.Js</p>
-                            <p>Axios</p>
-                            <p>Git</p>
-                            <p>CSS/SCSS</p>
+                        <div class="links">
+                            <a href="#" target="_blank">Visit Project</a>
+                            <a href="#" target="_blank">View Source</a>
+                            <a href="#" target="_blank"><img src="./assets/dribbble.svg" alt="#"></a>
                         </div>
                     </div>
-                    <div class="links">
-                        <button>Visit Project</button>
-                        <button>View Source</button>
-                        <img src="#" alt="Figma File">
+                </div>
+    
+                <div class="image">
+                    <img src="./assets/movie.jpg" alt="Movie App">
+                    <div class="image_overlay">
+                        <p>StreamMe is a feature rich <span>React / Redux application</span> that’s connected to a backend using MongoDB Atlas. Browse all of your favorite movies and add them to a watchlist while having access to them through a <span>user profile</span> made possible using JWT Token for <span>Authentication</span>. It fetches data from <span>TMDB API</span> using Axios which uses pagination to sort through 20 films at a time.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Personal Trainer Project -->
+            <div class="project_container project_reverse">
+                <div class="project_content">
+                    <div class="project_content_inner">
+                        <h4>ANDYTUD <span class="project_line"></span></h4>
+                        <p>Utilising:</p>
+                        <div class="tech">
+                            <div class="tech_left">
+                                <p>React</p>
+                                <p>Gatsby</p>
+                                <p>Bootstrap</p>
+                                <p>GSAP</p>
+                            </div>
+                            <div class="tech_right">
+                                <p>JS ES6</p>
+                                <p>Node.Js</p>
+                                <p>Git</p>
+                                <p>CSS/SCSS</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="#" target="_blank">Visit Project</a>
+                            <a href="#" target="_blank">View Source</a>
+                            <a href="#" target="_blank"><img src="./assets/dribbble.svg" alt="#"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image">
+                    <img src="./assets/trainer.jpg" alt="Personal Trainer App">
+                    <div class="image_overlay">
+                        <p>A <span>Freelanced</span> website for a personal trainer called Andrew Tudders. Provided UI/UX mockups using <span>wire framing</span> on Figma to ensure final product will fulfill all expectations. Built with <span>React / Gatsby</span> so the client would have no set up or hosting costs. This sit also features a daily <span>caloric needs calculator</span> as requested from the client.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nexia Ecommerce Project -->
+            <div class="project_container">
+                <div class="project_content">
+                    <div class="project_content_inner">
+                        <h4>NEXIA <span class="project_line"></span></h4>
+                        <p>Utilising:</p>
+                        <div class="tech">
+                            <div class="tech_left">
+                                <p>React</p>
+                                <p>Gatsby</p>
+                                <p>Bootstrap</p>
+                                <p>GraphQL</p>
+                            </div>
+                            <div class="tech_right">
+                                <p>HTML5</p>
+                                <p>Git</p>
+                                <p>CSS/SCSS</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="#" target="_blank">Visit Project</a>
+                            <a href="#" target="_blank">View Source</a>
+                            <a href="#" target="_blank"><img src="./assets/dribbble.svg" alt="#"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image">
+                    <img src="./assets/ecom.jpg" alt="Nexia Ecommerce App">
+                    <div class="image_overlay">
+                        <p>Nexia is an <span>React / Gatsby</span> e-commerce brand selling high-end fashion, styled using <span>Bootstrap</span> and SCSS , which implements a <span>contentful CMS</span> and retrieves data using <span>GraphQL</span> seamlessly. This was done so more products could be added in the future creating a dynamic workspace.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Portfolio Project -->
+            <div class="project_container project_reverse">
+                <div class="project_content">
+                    <div class="project_content_inner">
+                        <h4>Portfolio <span class="project_line"></span></h4>
+                        <p>Utilising:</p>
+                        <div class="tech">
+                            <div class="tech_left">
+                                <p>HTML5</p>
+                                <p>CSS/SCSS</p>
+                                <p>Git</p>
+                            </div>
+                            <div class="tech_right">
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="#" target="_blank">Visit Project</a>
+                            <a href="#" target="_blank">View Source</a>
+                            <a href="#" target="_blank"><img src="./assets/dribbble.svg" alt="#"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image">
+                    <img src="./assets/portfolio.jpg" alt="Portfolio App">
+                    <div class="image_overlay">
+                        <p>This portfolio was designed in Figma to display <span>some of my favorite projects</span>. These 6 projects out of many display a variety of skill under my belt and are layed out in a way that makes it easy for you to see what they look like, what technologies are used, a link to visit the <span>live site</span> + <span>source code</span> and a <span>brief description</span> of each.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Forkify Project -->
+            <div class="project_container">
+                <div class="project_content">
+                    <div class="project_content_inner">
+                        <h4>FORKIFY <span class="project_line"></span></h4>
+                        <p>Utilising:</p>
+                        <div class="tech">
+                            <div class="tech_left">
+                                <p>Food2Fork API</p>
+                                <p>Babel</p>
+                                <p>Webpack</p>
+                                <p>JS ES6</p>
+                            </div>
+                            <div class="tech_right">
+                                <p>Axios</p>
+                                <p>Git</p>
+                                <p>HTML5</p>
+                                <p>CSS3</p>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <a href="#" target="_blank">Visit Project</a>
+                            <a href="#" target="_blank">View Source</a>
+                            <a href="#" target="_blank" class="dribbble"><img src="./assets/dribbble.svg" alt="#"></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="image">
+                    <img src="./assets/recipe.jpg" alt="Forkify Recipe App">
+                    <div class="image_overlay">
+                        <p>The Forkify Recipe App allows users to search for recipes using the <span>Food2Fork API</span>. Users can also view the recipe along with the cook time ingredients. Users can add their favorite meals to a favorite meals section which is stored using <span>local storage</span> so no need for a backend. <span>Webpack</span> was used as the module bundler to incorporate <span>Axios</span> for fetching. No frameworks were used in this application as it was coded in vanilla Javascript.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="image">
-                <img src="./assets/movie.jpg" alt="Movie App">
-            </div>
         </div>
-
-        <!-- Personal Trainer Project -->
-        <div class="project_container">
-            <div class="project_content">
-                <div class="project_content_inner">
-                    <h4>ANDYTUD <span class="project_line"></span></h4>
-                    <p>Utilising:</p>
-                    <div class="tech">
-                        <div class="tech_left">
-                            <p>React</p>
-                            <p>Gatsby</p>
-                            <p>Bootstrap</p>
-                            <p>GSAP</p>
-                        </div>
-                        <div class="tech_right">
-                            <p>JS ES6</p>
-                            <p>Node.Js</p>
-                            <p>Git</p>
-                            <p>CSS/SCSS</p>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <button>Visit Project</button>
-                        <button>View Source</button>
-                        <img src="#" alt="Figma File">
-                    </div>
-                </div>
-            </div>
-
-            <div class="image">
-                <img src="./assets/trainer.jpg" alt="Personal Trainer App">
-            </div>
-        </div>
-        
-        <!-- Nexia Ecommerce Project -->
-        <div class="project_container">
-            <div class="project_content">
-                <div class="project_content_inner">
-                    <h4>NEXIA <span class="project_line"></span></h4>
-                    <p>Utilising:</p>
-                    <div class="tech">
-                        <div class="tech_left">
-                            <p>React</p>
-                            <p>Gatsby</p>
-                            <p>Bootstrap</p>
-                            <p>GraphQL</p>
-                        </div>
-                        <div class="tech_right">
-                            <p>HTML5</p>
-                            <p>Git</p>
-                            <p>CSS/SCSS</p>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <button>Visit Project</button>
-                        <button>View Source</button>
-                        <img src="#" alt="Figma File">
-                    </div>
-                </div>
-            </div>
-
-            <div class="image">
-                <img src="./assets/ecom.jpg" alt="Nexia Ecommerce App">
-            </div>
-        </div>
-
-        <!-- Portfolio Project -->
-        <div class="project_container">
-            <div class="project_content">
-                <div class="project_content_inner">
-                    <h4>Portfolio <span class="project_line"></span></h4>
-                    <p>Utilising:</p>
-                    <div class="tech">
-                        <div class="tech_left">
-                            <p>HTML5</p>
-                            <p>CSS/SCSS</p>
-                            <p>Git</p>
-                        </div>
-                        <div class="tech_right">
-                        </div>
-                    </div>
-                    <div class="links">
-                        <button>Visit Project</button>
-                        <button>View Source</button>
-                        <img src="#" alt="Figma File">
-                    </div>
-                </div>
-            </div>
-
-            <div class="image">
-                <img src="./assets/portfolio.jpg" alt="Portfolio App">
-            </div>
-        </div>
-
-        <!-- Forkify Project -->
-        <div class="project_container">
-            <div class="project_content">
-                <div class="project_content_inner">
-                    <h4>FORKIFY <span class="project_line"></span></h4>
-                    <p>Utilising:</p>
-                    <div class="tech">
-                        <div class="tech_left">
-                            <p>Food2Fork API</p>
-                            <p>Babel</p>
-                            <p>Webpack</p>
-                            <p>JS ES6</p>
-                        </div>
-                        <div class="tech_right">
-                            <p>Axios</p>
-                            <p>Git</p>
-                            <p>HTML5</p>
-                            <p>CSS3</p>
-                        </div>
-                    </div>
-                    <div class="links">
-                        <button>Visit Project</button>
-                        <button>View Source</button>
-                        <img src="#" alt="Figma File">
-                    </div>
-                </div>
-            </div>
-
-            <div class="image">
-                <img src="./assets/recipe.jpg" alt="Forkify Recipe App">
-            </div>
-        </div>
-
     </main>
 
     <!-- About & Skills Section -->
-    <section>
+    <section class="aboutMe">
         
         <img src="./assets/upperwave.svg" alt="Wave">
 
@@ -224,7 +243,7 @@
             </div>
         </div>
 
-        <span></span>
+        <span class="linee"></span>
 
         <div class="skills">
             <div class="skills_container">
@@ -232,21 +251,21 @@
                 
                 <ul class="skills_list">
                     <li>
-                        <p><span>FRONT END</span>:</p>
-                        <p>React, JavaScript, HTML5, CSS3/SCSS, jQuery, Gatsby, Front-end Frameworks
+                        <p><span>FRONTEND</span>:</p>
+                        <p>JavaScript, HTML5, CSS3/SCSS, React, jQuery, Gatsby, Front-end Frameworks
                             - (Bootstrap / Materialise / Semantic ui)</p>
                     </li>
                     <li>
-                        <p><span>FRONT END</span>:</p>
+                        <p><span>BACKEND</span>:</p>
                         <p>NodeJS, Express, MongoDB, Axios</p>
                     </li>
                     <li>
-                        <p><span>FRONT END</span>:</p>
+                        <p><span>OTHER</span>:</p>
                         <p>Git, GitHub, Wordpress, Figma, Photoshop, Premiere</p>
                     </li>
                     <li>
-                        <p><span>FRONT END</span>:</p>
-                        <p>Magento, PHP, Typescript, GraphQL, Redux</p>
+                        <p><span>LEARNING</span>:</p>
+                        <p>Shopify, Magento, PHP, Typescript, GraphQL, Redux</p>
                     </li>
                 </ul>
             </div>
