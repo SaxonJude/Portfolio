@@ -93,3 +93,54 @@
         max-width: 450px;
     }
 }
+
+@media screen and (max-width: 390px) {
+
+    nav .nav_container ul li {
+        margin-left: 2rem;
+    }
+
+
+    .hero .hero_container {
+        max-width: 380px;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    main .projects_title h2 {
+        font-size: 35px;
+    }
+
+    main .main_container .image .image_overlay p {
+        width: auto;
+    }
+
+    .image, .image img {
+        width: 360px !important;
+    }
+
+    main .main_container .image .image_overlay p {
+        font-size: 11px !important;
+        line-height: 18px !important;
+        font-weight: 300 !important;
+        width: 90% !important;
+    }
+
+    main .main_container .project_container {
+        height: 500px !important;
+    }
+
+    .aboutMe .about {
+        max-width: 370px !important;
+    }
+
+    .aboutMe .about p {
+        font-size: 16px !important;
+    }
+
+    .skills {
+        max-width: 360px !important;
+    }
+}
