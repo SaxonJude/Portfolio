@@ -8,6 +8,7 @@ nav {
     height: 90px;
     width: 100%;
     @include flex-custom(row, center, center);
+    background-color: $dark-black;
 
     img {
         position: relative;

@@ -1,0 +1,95 @@
+@media screen and (max-width: 1024px) {
+    
+    main .main_container .project_container {
+        flex-direction: column-reverse;
+        height: 600px;
+    }
+
+    main .main_container .project_container .project_content {
+        justify-content: center !important;
+        
+        .project_content_inner {
+            align-items: center;
+
+            h4 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    main .main_container .project_reverse {
+        flex-direction: column-reverse !important;
+    }
+    
+    .aboutMe .about {
+        max-width: 768px !important;
+    }
+
+    .skills {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .aboutMe .about {
+        max-width: 568px !important;
+    }
+
+    .skills {
+        max-width: 568px;
+    }
+
+}
+
+@media screen and (max-width: 568px) {
+
+    .projects_title {
+        margin-bottom: 1.5rem;
+    }
+
+    main .projects_title h2 {
+        font-size: 40px;
+    }
+
+    main .main_container .project_container {
+        height: 550px;
+        margin: 3rem 0;
+    }
+
+    .main_container {
+        background: linear-gradient(hsla(0,0%,100%,.25),hsla(0,0%,100%,.25)) no-repeat top/1px 98.5% !important;
+    }
+
+    .image, .image img {
+        width: 450px !important;
+    }
+    
+    .image {
+        height: auto !important;
+
+        .image_overlay p {
+            line-height: 20px !important;
+            font-size: 12px !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    .aboutMe .about {
+        max-width: 450px !important;
+        margin: 10rem 0 5rem 0 !important;
+
+        p {
+            font-size: 18px !important;
+        }
+
+        h3 {
+            font-size: 32px !important;
+        }
+    }
+    
+    .skills {
+        margin: 5rem 0 10rem 0 !important;
+        max-width: 450px;
+    }
+}

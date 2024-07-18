@@ -6,26 +6,34 @@ footer {
   background: $dark-black;
   height: 250px;
   width: 100%;
+
   .footer_container {
     @include flex-custom(column, center, center);
     height: 130px;
     width: 430px;
-    * {
-      color: $color-white;
+    
+    .footer_links {
+      width: 60%;
+      @include flex-custom(row, space-between, center);
+      margin: 2rem 0;
     }
+    
     img {
       width: 100px;
     }
+
     ul {
       @include flex-custom(row, space-between, center);
       width: 100%;
       margin: 0;
       height: 65px;
       padding: 0;
+
       li {
         @include flex-custom(row, space-between, center);
         width: 165px;
         list-style-type: none;
+
         a {
           font-weight: 500;
           font-size: 14px;
@@ -33,9 +41,12 @@ footer {
         }
       }
     }
+
     p {
       font-size: 12px;
       font-weight: 300;
+      margin: 0;
     }
+
   }
 }
