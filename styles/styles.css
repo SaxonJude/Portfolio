@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   main .main_container .project_container {
     flex-direction: column-reverse;
@@ -107,6 +125,24 @@
   }
   .skills {
     max-width: 360px !important;
+  }
+}
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -274,8 +310,26 @@ nav .nav_container ul li a:hover {
   color: #fff !important;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 .hero {
-  height: 100vh;
+  height: 105vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -318,6 +372,24 @@ nav .nav_container ul li a:hover {
   font-size: 15px;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   main .main_container .project_container {
     flex-direction: column-reverse;
@@ -485,6 +557,24 @@ footer .footer_container p {
   margin: 0;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   main .main_container .project_container {
     flex-direction: column-reverse;
@@ -774,6 +864,24 @@ main .main_container .image:hover {
   background-color: #000;
 }
 
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   main .main_container .project_container {
     flex-direction: column-reverse;
@@ -942,6 +1050,189 @@ main .main_container .image:hover {
 }
 .aboutMe .skills .skills_container .skills_list li p:last-of-type {
   font-size: 16px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .main_container .project_container {
+    flex-direction: column-reverse;
+    height: 600px;
+  }
+  main .main_container .project_container .project_content {
+    justify-content: center !important;
+  }
+  main .main_container .project_container .project_content .project_content_inner {
+    align-items: center;
+  }
+  main .main_container .project_container .project_content .project_content_inner h4 {
+    font-size: 28px;
+  }
+  main .main_container .project_reverse {
+    flex-direction: column-reverse !important;
+  }
+  .aboutMe .about {
+    max-width: 768px !important;
+  }
+  .skills {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutMe .about {
+    max-width: 568px !important;
+  }
+  .skills {
+    max-width: 568px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .projects_title {
+    margin-bottom: 1.5rem;
+  }
+  main .projects_title h2 {
+    font-size: 40px;
+  }
+  main .main_container .project_container {
+    height: 550px;
+    margin: 3rem 0;
+  }
+  .main_container {
+    background: linear-gradient(hsla(0, 0%, 100%, 0.25), hsla(0, 0%, 100%, 0.25)) no-repeat top/1px 98.5% !important;
+  }
+  .image, .image img {
+    width: 450px !important;
+  }
+  .image {
+    height: auto !important;
+  }
+  .image .image_overlay p {
+    line-height: 20px !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+  .aboutMe .about {
+    max-width: 450px !important;
+    margin: 10rem 0 5rem 0 !important;
+  }
+  .aboutMe .about p {
+    font-size: 18px !important;
+  }
+  .aboutMe .about h3 {
+    font-size: 32px !important;
+  }
+  .skills {
+    margin: 5rem 0 10rem 0 !important;
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 390px) {
+  nav .nav_container ul li {
+    margin-left: 2rem;
+  }
+  .hero .hero_container {
+    max-width: 380px;
+  }
+  .hero .hero_container h1 {
+    font-size: 40px;
+  }
+  main .projects_title h2 {
+    font-size: 35px;
+  }
+  main .main_container .image .image_overlay p {
+    width: auto;
+  }
+  .image, .image img {
+    width: 360px !important;
+  }
+  main .main_container .image .image_overlay p {
+    font-size: 11px !important;
+    line-height: 18px !important;
+    font-weight: 300 !important;
+    width: 90% !important;
+  }
+  main .main_container .project_container {
+    height: 500px !important;
+  }
+  .aboutMe .about {
+    max-width: 370px !important;
+  }
+  .aboutMe .about p {
+    font-size: 16px !important;
+  }
+  .skills {
+    max-width: 360px !important;
+  }
+}
+.contact {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.contact .contact_box h2 {
+  margin: 0;
+}
+.contact .contact_box form {
+  width: 100%;
+}
+.contact .contact_box form label {
+  color: #fff;
+}
+.contact .contact_box form input {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.contact .contact_box form input:last-child {
+  height: 40px;
+  margin-bottom: 0rem;
+  background-color: #e91e63;
+  color: #fff;
+  font-family: "Poppins";
+  transition: ease-in-out 0.3s;
+}
+.contact .contact_box form input:last-child:hover {
+  background-color: #b10c43;
+  cursor: crosshair;
+}
+.contact .contact_box form input:focus {
+  outline: 1px solid #e91e63;
+}
+.contact .contact_box form textarea {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.contact .contact_box form textarea:focus {
+  outline: 1px solid #e91e63;
 }
 
 body {

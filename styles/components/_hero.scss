@@ -1,7 +1,7 @@
 @import "../variables";
 
 .hero {
-    height: 100vh;
+    height: 105vh;
     width: 100vw;
     @include flex-custom(column, center, center);
     user-select: none;

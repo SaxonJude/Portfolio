@@ -10,3 +10,22 @@ $brand-color-hover:#e91e63;
   justify-content: $j;
   align-items: $a;
 }
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+      transition: none;
+  }
+}
