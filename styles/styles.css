@@ -1209,6 +1209,7 @@ main .main_container .image:hover {
   margin-bottom: 1rem;
   border: none;
   border-radius: 5px;
+  padding: 0.5rem;
 }
 .contact .contact_box form input:last-child {
   height: 40px;
@@ -1230,9 +1231,148 @@ main .main_container .image:hover {
   height: 4rem;
   margin-bottom: 1rem;
   border-radius: 5px;
+  padding: 0.5rem;
 }
 .contact .contact_box form textarea:focus {
   outline: 1px solid #e91e63;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .main_container .project_container {
+    flex-direction: column-reverse;
+    height: 600px;
+  }
+  main .main_container .project_container .project_content {
+    justify-content: center !important;
+  }
+  main .main_container .project_container .project_content .project_content_inner {
+    align-items: center;
+  }
+  main .main_container .project_container .project_content .project_content_inner h4 {
+    font-size: 28px;
+  }
+  main .main_container .project_reverse {
+    flex-direction: column-reverse !important;
+  }
+  .aboutMe .about {
+    max-width: 768px !important;
+  }
+  .skills {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutMe .about {
+    max-width: 568px !important;
+  }
+  .skills {
+    max-width: 568px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .projects_title {
+    margin-bottom: 1.5rem;
+  }
+  main .projects_title h2 {
+    font-size: 40px;
+  }
+  main .main_container .project_container {
+    height: 550px;
+    margin: 3rem 0;
+  }
+  .main_container {
+    background: linear-gradient(hsla(0, 0%, 100%, 0.25), hsla(0, 0%, 100%, 0.25)) no-repeat top/1px 98.5% !important;
+  }
+  .image, .image img {
+    width: 450px !important;
+  }
+  .image {
+    height: auto !important;
+  }
+  .image .image_overlay p {
+    line-height: 20px !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+  .aboutMe .about {
+    max-width: 450px !important;
+    margin: 10rem 0 5rem 0 !important;
+  }
+  .aboutMe .about p {
+    font-size: 18px !important;
+  }
+  .aboutMe .about h3 {
+    font-size: 32px !important;
+  }
+  .skills {
+    margin: 5rem 0 10rem 0 !important;
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 390px) {
+  nav .nav_container ul li {
+    margin-left: 2rem;
+  }
+  .hero .hero_container {
+    max-width: 380px;
+  }
+  .hero .hero_container h1 {
+    font-size: 40px;
+  }
+  main .projects_title h2 {
+    font-size: 35px;
+  }
+  main .main_container .image .image_overlay p {
+    width: auto;
+  }
+  .image, .image img {
+    width: 360px !important;
+  }
+  main .main_container .image .image_overlay p {
+    font-size: 11px !important;
+    line-height: 18px !important;
+    font-weight: 300 !important;
+    width: 90% !important;
+  }
+  main .main_container .project_container {
+    height: 500px !important;
+  }
+  .aboutMe .about {
+    max-width: 370px !important;
+  }
+  .aboutMe .about p {
+    font-size: 16px !important;
+  }
+  .skills {
+    max-width: 360px !important;
+  }
+}
+.c-item {
+  height: 90vh;
+}
+.c-item .c-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.7);
 }
 
 body {

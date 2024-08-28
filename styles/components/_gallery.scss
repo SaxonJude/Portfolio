@@ -1,0 +1,12 @@
+@import "../variables";
+@import "../media";
+
+.c-item {
+    height: 90vh;
+
+    .c-img {
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.7);
+    }
+}   
